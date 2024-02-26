@@ -2,20 +2,7 @@
     <TheHeader :author-id="doc.author" />
     <main class="mt-28">
         <div v-if="doc">
-            <div
-                v-if="doc.cover"
-                class="md:flex justify-center mt-24 hidden lg:h-[500px]"
-            >
-                <NuxtImg
-                    :src="'/images/' + doc.cover"
-                    :alt="doc.title"
-                    fit="cover"
-                    placeholder
-                />
-            </div>
             <div class="px-4 mx-auto sm:px-6 xl:max-w-7xl xl:px-0 mt-10">
-                <ArticleHeader :article="doc" />
-
                 <div class="text-left mx-auto">
                     <div class="flex flex-wrap lg:flex-row-reverse py-12">
                         <div v-if="isTocEnabled" class="w-full lg:w-1/4 px-5">
@@ -36,18 +23,6 @@
                 </div>
 
                 <hr class="mb-8" />
-
-                <SharingButtons
-                    :title="doc.title"
-                    :post-link="postLink"
-                    :author-id="doc.author"
-                />
-
-                <hyvor-talk-comments
-                    v-if="config.public.comments.enabled"
-                    :website-id="config.public.comments.hyvor_talk.website_id"
-                    :page-id="doc.id"
-                ></hyvor-talk-comments>
             </div>
         </div>
     </main>
@@ -59,8 +34,6 @@ const route = useRoute();
 const { data: doc } = await useAsyncData(route.path, async () => {
     return await queryContent("").where({ _path: route.path }).findOne();
 });
-
-const postLink = `${config.public.url}${route.path}`;
 
 const isTocEnabled =
     doc.value?.body?.toc?.links.length &&
@@ -87,18 +60,6 @@ onMounted(() => {
         img.parentNode?.insertBefore(captionElement, img.nextSibling);
     });
 });
-
-if (config.public.comments.enabled) {
-    useHead({
-        script: [
-            {
-                async: true,
-                src: "https://talk.hyvor.com/embed/embed.js",
-                type: "module",
-            },
-        ],
-    });
-}
 
 if (doc.value) {
     useContentHead(doc.value);

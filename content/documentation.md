@@ -20,14 +20,50 @@ Bloggr is built on top of
 
 It is a **static** blog generator that uses markdown files to generate blog posts.
 
-## Static blog generator
-
 A static blog generator is a tool that generates a blog from markdown files. It is a great way to create a blog because it is simple, fast, and secure. It requires no database and no server-side code. It is just a bunch of HTML, CSS, and JavaScript files.
 
-* It is **secure** because there is no server-side code that can be hacked. 
-* It is **fast** because there is no database to query and no server-side code to execute.    
+* It is **secure** because there is no server-side code that can be hacked.
+* It is **fast** because there is no database to query and no server-side code to execute.
 * It is **simple** because it is just a bunch of files.
-* It is **cheap** because it can be hosted on a static hosting provider.  
+* It is **cheap** because it can be hosted on a static hosting provider.
+
+## Installation
+
+Bloggr is a template that you can use to create your own blog. You can clone the repository and start writing your own content.
+
+In most situations, you'll store your blog in a git repository and deploy it to a static hosting provider like Netlify, Vercel, Cloudflare-pages or Github pages.
+
+::alert{type="warning"}
+Even if it's only a matter of downloading files and writing markdown, you'll need to have some knowledge of git, markdown, and the command line
+::
+
+You have two options here : 
+
+1. Clone the repository 
+
+```bash
+# npm
+git clone https://github.com/hlassiege/bloggr.git bloggr
+```
+
+2. **OR** Alternatively, you can download the zip file from the [repository](https://github.com/hlassiege/bloggr) and extract it.
+
+![Download archive](/images/doc/download.png "Download archive")
+
+Then, you can install the dependencies from the root of the project.
+
+```bash
+# npm
+npm install
+```
+
+Now it's done, you can start the development server to see your blog in action on http://localhost:3000
+
+```bash 
+# npm
+npm run dev
+```
+
 
 ## Configuration
 
@@ -45,21 +81,18 @@ You can configure
 
 Read the actual nuxt.config.ts file to see the configuration of the blog.
 
+
+
 ## Markdown
 
 You can use all standard markdown features plus some extra features such as frontmatter to add metadata to your markdown files.  
 You can read more about it [here](/markdown).
 
-## SEO friendly
+## SEO
 
 Bloggr is SEO friendly. It generates a sitemap and a RSS feed. It also supports Open Graph and Twitter cards. It has been optimized for search engines.  
 
-### Choose your language
-
-
-The content you'll write on your blog will be in the language you choose. It's important for bots to set up the right language in the html attribute of the `nuxt.config.ts` file.
-
-The default value is "en"
+By default the language of the blog is set to "en" in the nuxt.config.ts file. You can change it to your language.
 
 ```typescript
 export default {
@@ -106,17 +139,14 @@ Performance are an important part of SEO. Here is the lighthouse score of this b
 
 Performance could vary depending on the server and the network and images you use in your blog.
 
-
-
 ## Comment system
 
 You can enable comments on your blog. It uses [Hyvor Talk](https://talk.hyvor.com/).  
 
-Comments are a great way to interact with your readers. It's a great way to get feedback and improve your content.
+I use [Hyvor talk](https://talk.hyvor.com/) for this blog.
+If you want to use it, **you'll need to create an account** and get a website id.
 
-On a static website, you don't have a database. But you can use a third-party service to add comments to your blog.
-
-I use [Hyvor talk](https://talk.hyvor.com/) for this blog. You can enable it by adding the following code to the `nuxt.config.ts` file:
+Then, you can enable it by adding the following code to the `nuxt.config.ts` file:
 
 ```typescript
             comments: {
@@ -128,7 +158,7 @@ I use [Hyvor talk](https://talk.hyvor.com/) for this blog. You can enable it by 
 ```
 
 ::alert
-Replace `YOUR_HYVOR_TALK_WEBSITE_ID` with your Hyvor Talk website id.
+Replace `YOUR_HYVOR_TALK_WEBSITE_ID` with your Hyvor Talk website id. 
 ::
 
 
@@ -146,8 +176,9 @@ It means you can define the url structure of your blog by organizing the files i
 
 For example, you can have url like `/2024/01/files_hierarchy` if the file is located at `content/2024/01/files_hierarchy.md`.
 
+::alert
 It is highly recommended to use a hierarchical structure for the files, to make the blog more organized and to make the urls more meaningful.
-
+::
 
 ## Analytics
 
@@ -180,84 +211,6 @@ export default {
 ::alert
 Replace `YOUR_PIRSCH_CODE` with your Pirsch code.
 ::
-
-
-## Table of content
-
-The table of content is a great way to help your readers navigate through your blog post. It can be displayed as a sidebar or directly inside the blog post.
-
-1. If you want to display the table of content as a navigation sidebar
-2. If you prefer to display the table of content directly inside the blog post, you can use the `toc` shortcode.
-
-
-### Requirements
-
-In order to display the table of content, you need to use several markdown headers. The table of content will be generated based on the headers.
-
-Example:
-
-```markdown
-## Title 1
-## Title 2
-## Title 3
-```
-
-::alert
-Only the headers with a level 2 will be displayed in the table of content.
-::
-
-### Table of content with a shortcode
-
-The table of content can be displayed directly inside the blog post by using the `toc` shortcode.
-
-```markdown
-:toc
-```
-
-Example :
-:toc
-
-
-### Table of content as a sidebar
-
-The sidebar will be displayed on the right side of the page on desktop and just below the blog post on mobile.
-
-![Illustration of the table of content as a sidebar](/images/doc/sidebar-toc.jpg "Illustration of the table of content as a sidebar")
-
-The table of content is responsive and will be displayed on the right side of the page on desktop and just below the blog post on mobile :
-
-![Illustration of the table of content for mobile](/images/doc/toc-mobile.jpg "Illustration of the table of content for mobile")
-
-You can enable it by setting the `table_of_contents` front matter to `true` or you can enable it globally in the nuxt.config.ts file.
-
-#### First method : front matter
-
-Enable the table of content by setting the `table_of_contents` front matter to `true` only for the blog post you want to display it.
-It will override the global configuration.
-
-```markdown
----
-table_of_contents: true
----
-```
-
-
-#### Second method : nuxt.config.ts
-
-Enable the table of content globally in the nuxt.config.ts file.
-It can be overridden by the front matter to disable it for a specific blog post.
-
-```typescript
-// nuxt.config.ts
-export default {
-    runtimeConfig: {
-        public: {
-            table_of_contents: true,
-        },
-    },
-};
-```
-
 
 
 ## Newsletter

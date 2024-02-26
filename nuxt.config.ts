@@ -35,17 +35,7 @@ export default defineNuxtConfig({
 
             socials: {
                 twitter: "https://twitter.com/hugolassiege",
-                mastodon: "https://piaille.fr/@hugolassiege",
                 github: "https://github.com/hlassiege",
-            },
-
-            comments: {
-                enabled: true,
-                hyvor_talk: {
-                    website_id: process.env.HYVOR_ID
-                        ? process.env.HYVOR_ID
-                        : "YOUR_HYVOR_TALK_WEBSITE_ID",
-                },
             },
 
             table_of_contents: false,

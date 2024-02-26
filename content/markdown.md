@@ -201,6 +201,62 @@ This is a warning
 ::
 
 
-And the table of contents : 
+## Table of contents
 
+::alert
+Only the headers with a level 2 will be displayed in the table of content.
+::
+
+### Table of content as a sidebar
+
+The sidebar will be displayed on the right side of the page on desktop and just below the blog post on mobile.
+
+![Illustration of the table of content as a sidebar](/images/doc/sidebar-toc.jpg "Illustration of the table of content as a sidebar")
+
+The table of content is responsive and will be displayed on the right side of the page on desktop and just below the blog post on mobile :
+
+![Illustration of the table of content for mobile](/images/doc/toc-mobile.jpg "Illustration of the table of content for mobile")
+
+You can enable it by setting the `table_of_contents` front matter to `true` or you can enable it globally in the nuxt.config.ts file.
+
+#### First method : front matter
+
+Enable the table of content by setting the `table_of_contents` front matter to `true` only for the blog post you want to display it.
+It will override the global configuration.
+
+```markdown
+---
+table_of_contents: true
+---
+```
+
+
+#### Second method : nuxt.config.ts
+
+Enable the table of content globally in the nuxt.config.ts file.
+It can be overridden by the front matter to disable it for a specific blog post.
+
+```typescript
+// nuxt.config.ts
+export default {
+    runtimeConfig: {
+        public: {
+            table_of_contents: true,
+        },
+    },
+};
+```
+
+### Table of content with a shortcode
+
+The table of content can be displayed directly inside the blog post by using the `toc` shortcode.
+
+```markdown
 :toc
+```
+
+Example :
+:toc
+
+
+

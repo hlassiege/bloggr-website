@@ -19,19 +19,6 @@
                 <div class="flex flex-col items-start mt-6">
                     <div class="flex mb-3 space-x-4">
                         <NuxtLink
-                            aria-label="Open Mastodon profile"
-                            class="text-sm text-gray-500 transition hover:text-gray-600"
-                            target="_blank"
-                            rel="me"
-                            :to="config.public.socials.mastodon"
-                            ><span class="sr-only">Mastodon</span>
-                            <img
-                                alt="Icon for Mastodon"
-                                class="transition-transform hover:scale-110 w-6 h-6"
-                                src="~assets/icon/mastodon.svg"
-                            />
-                        </NuxtLink>
-                        <NuxtLink
                             aria-label="Open github profile"
                             class="text-sm text-gray-500 transition hover:text-gray-600"
                             target="_blank"
@@ -68,9 +55,6 @@
                 <div>Copyright © {{ new Date().getFullYear() }}</div>
                 <div>•</div>
                 &nbsp;{{ config.public.name }}
-                <div>•</div>
-                &nbsp; Powered by
-                <a href="https://github.com/hlassiege/bloggr">Bloggr</a>
             </div>
         </div>
     </footer>
