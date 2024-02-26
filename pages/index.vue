@@ -8,7 +8,7 @@
                     <div class="flex justify-center">
                         <a
                             class="inline-flex items-center gap-x-2 bg-white border border-gray-200 text-sm text-gray-800 p-1 ps-3 rounded-full transition hover:border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:hover:border-gray-600 dark:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                            href="#"
+                            href="#templates"
                         >
                             <span class="font-bold text-pink-500">PRO</span>
                             templates available
@@ -444,6 +444,7 @@
         <div class="mx-auto max-w-[85rem] md:p-4 mt-20 md:mt-40">
             <div class="flex mb-14 ml-10 md:ml-0">
                 <span
+                    id="templates"
                     class="block font-bold text-gray-600 text-3xl md:text-4xl lg:text-5xl dark:text-gray-200"
                 >
                     Templates
