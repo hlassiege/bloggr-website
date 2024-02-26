@@ -19,19 +19,6 @@
                 <div class="flex flex-col items-start mt-6">
                     <div class="flex mb-3 space-x-4">
                         <NuxtLink
-                            aria-label="Open Youtube profile"
-                            class="text-sm text-gray-500 transition hover:text-gray-600"
-                            target="_blank"
-                            rel="me"
-                            :to="config.public.socials.youtube"
-                            ><span class="sr-only">Youtube</span>
-                            <img
-                                alt="Icon for Youtube"
-                                class="transition-transform hover:scale-110 w-6 h-6"
-                                src="~assets/icon/youtube.svg"
-                            />
-                        </NuxtLink>
-                        <NuxtLink
                             aria-label="Open Mastodon profile"
                             class="text-sm text-gray-500 transition hover:text-gray-600"
                             target="_blank"
@@ -55,18 +42,6 @@
                                 alt="Icon for Github"
                                 class="transition-transform hover:scale-110 w-6 h-6"
                                 src="~assets/icon/github_new.svg"
-                            /> </NuxtLink
-                        ><NuxtLink
-                            aria-label="Open linkedin profile"
-                            class="text-sm text-gray-500 transition hover:text-gray-600"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            :to="config.public.socials.linkedin"
-                            ><span class="sr-only">Linkedin</span>
-                            <img
-                                alt="Icon for Linkedin"
-                                class="transition-transform hover:scale-110 w-6 h-6"
-                                src="~assets/icon/linkeding.svg"
                             />
                         </NuxtLink>
                         <NuxtLink
@@ -85,9 +60,10 @@
                     </div>
                 </div>
             </div>
-
+        </div>
+        <div class="max-w-6xl mx-auto flex items-center justify-center mt-6">
             <div
-                class="flex mb-2 space-x-2 text-sm text-gray-500 dark:text-gray-400"
+                class="flex items-center mx-auto mb-2 space-x-2 text-sm text-gray-500 dark:text-gray-400"
             >
                 <div>Copyright © {{ new Date().getFullYear() }}</div>
                 <div>•</div>
@@ -103,27 +79,4 @@
 <script setup lang="ts">
 const config = useRuntimeConfig();
 const menu = config.public.menu;
-const newsletterEnabled = config.public.newsletter.enabled;
-const formAction = config.public.newsletter.form_action;
-const email = ref("");
-const success = ref(false);
-const error = ref(false);
-
-async function subscribe() {
-    const formData = new FormData();
-    formData.append("fields[email]", email.value);
-    formData.append("ml-submit", "1");
-    formData.append("anticsrf", "true");
-    const response = await fetch(formAction, {
-        method: "POST",
-        body: formData,
-    });
-    email.value = "";
-
-    if (response.ok) {
-        success.value = true;
-    } else {
-        error.value = true;
-    }
-}
 </script>
