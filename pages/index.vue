@@ -60,10 +60,11 @@
                     <!-- Buttons -->
                     <div class="mt-8 gap-3 flex justify-center">
                         <NuxtLink
-                            class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 hover:from-violet-600 hover:to-blue-600 border border-transparent text-white text-sm font-medium rounded-md focus:outline-none focus:ring-1 focus:ring-gray-600 py-3 px-4 dark:focus:ring-offset-gray-800"
-                            to="/documentation"
+                            target="_blank"
+                            class="inline-flex justify-center items-center text-xl gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 hover:from-violet-600 hover:to-blue-600 border border-transparent text-white text-sm font-medium rounded-md focus:outline-none focus:ring-1 focus:ring-gray-600 py-3 px-4 dark:focus:ring-offset-gray-800"
+                            to="https://bloggr-demo.eventuallycoding.com"
                         >
-                            Get started
+                            Live demo
                             <svg
                                 class="flex-shrink-0 size-4"
                                 width="16"
@@ -82,7 +83,7 @@
                         <NuxtLink
                             target="_blank"
                             to="https://github.com/hlassiege/bloggr"
-                            class="relative group p-2 ps-3 inline-flex items-center gap-x-2 text-sm font-mono rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                            class="relative group p-2 ps-3 inline-flex items-center gap-x-2 text-lg font-mono rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                         >
                             Github
                             <span
