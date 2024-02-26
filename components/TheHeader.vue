@@ -76,11 +76,13 @@
                                     <img
                                         v-if="config.public.logo"
                                         src="/images/logo.png"
-                                        class="h-10"
+                                        class="h-10 mt-auto"
                                     />
-                                    <nuxt-link class="mt-2" to="/">{{
-                                        blogName
-                                    }}</nuxt-link>
+                                    <nuxt-link
+                                        class="mt-auto text-3xl"
+                                        to="/"
+                                        >{{ blogName }}</nuxt-link
+                                    >
                                 </div>
                             </span>
                         </div>
@@ -94,22 +96,6 @@
                                     :to="item.path"
                                     class="text-white hover:bg-gray-700 hover:text-white px-3 py-1 rounded-md text-base font-medium font-to-invert-to-black"
                                     >{{ item.name }}
-                                </NuxtLink>
-                                <NuxtLink
-                                    title="Subscribe to RSS feed"
-                                    aria-label="Open RSS feed"
-                                    class="text-sm text-gray-500 transition hover:text-gray-600"
-                                    rel="me"
-                                    target="_blank"
-                                    to="/rss.xml"
-                                    ><span class="sr-only"
-                                        >Subscribe to RSS feed</span
-                                    >
-                                    <img
-                                        alt="Icon for RSS"
-                                        class="transition-transform hover:scale-110 w-6 h-6 mt-1"
-                                        src="~assets/icon/rss.svg"
-                                    />
                                 </NuxtLink>
                             </div>
                         </div>
@@ -126,20 +112,6 @@
                         :to="item.path"
                         class="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium font-to-invert-to-black"
                         >{{ item.name }}
-                    </NuxtLink>
-                    <NuxtLink
-                        title="Subscribe to RSS feed"
-                        aria-label="Open RSS feed"
-                        class="text-sm text-gray-500 transition hover:text-gray-600"
-                        rel="me"
-                        target="_blank"
-                        to="/rss.xml"
-                        ><span class="sr-only">Subscribe to RSS feed</span>
-                        <img
-                            alt="Icon for RSS"
-                            class="ml-3 transition-transform hover:scale-110 w-6 h-6 mt-1"
-                            src="~assets/icon/rss.svg"
-                        />
                     </NuxtLink>
                 </div>
             </div>

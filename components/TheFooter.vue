@@ -1,9 +1,6 @@
 <template>
     <footer class="lg:mt-40 bg-gray-100 text-gray-800 p-6">
-        <div
-            class="max-w-6xl mx-auto grid grid-cols-1 gap-4"
-            :class="newsletterEnabled ? 'md:grid-cols-3' : 'md:grid-cols-2'"
-        >
+        <div class="max-w-6xl mx-auto grid grid-cols-1 gap-4 md:grid-cols-2">
             <div>
                 <h3 class="font-bold text-lg mb-4">Menu</h3>
                 <ul>
@@ -87,36 +84,6 @@
                         </NuxtLink>
                     </div>
                 </div>
-            </div>
-            <div v-if="newsletterEnabled">
-                <h3 class="font-bold text-lg mb-4">Subscribe</h3>
-                <p class="mb-4">Subscribe to get the latest posts by email.</p>
-                <p v-if="error" class="text-red-500 text-xs italic mb-2">
-                    Subscription failed. Please retry later
-                </p>
-                <p v-if="success" class="text-green-500 text-xs italic mb-2">
-                    You have successfully subscribed
-                </p>
-
-                <form :action="formAction" method="post" target="_blank">
-                    <input
-                        v-model="email"
-                        name="fields[email]"
-                        autocomplete="email"
-                        type="email"
-                        placeholder="Your email"
-                        class="p-2 text-gray-700 w-full"
-                        required
-                    />
-                    <input type="hidden" name="ml-submit" value="1" />
-                    <input type="hidden" name="anticsrf" value="true" />
-                    <button
-                        class="mt-2 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                        @click.prevent="subscribe"
-                    >
-                        Subscribe
-                    </button>
-                </form>
             </div>
 
             <div
