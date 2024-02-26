@@ -1,5 +1,5 @@
 <template>
-    <footer class="lg:mt-40 bg-gray-100 text-gray-800 p-6">
+    <footer class="mt-20 lg:mt-40 bg-gray-100 text-gray-800 p-6">
         <div class="max-w-6xl mx-auto grid grid-cols-1 gap-4 md:grid-cols-2">
             <div>
                 <h3 class="font-bold text-lg mb-4">Menu</h3>
