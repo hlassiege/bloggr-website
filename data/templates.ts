@@ -10,7 +10,8 @@ const templates = [
         name: "Epoxia",
         author: "eventuallycoding",
         image: "/images/templates/epoxia.png",
-        demo: "https://bloggr-demo.eventuallycoding.com",
+        demo: "https://bloggr-epoxia.eventuallycoding.com",
+        shop: "https://www.buymeacoffee.com/hlassiege/e/225402",
     },
 ];
 

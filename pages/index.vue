@@ -481,7 +481,7 @@
                         >
                             <a
                                 class="focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-s-md text-sm gap-x-1.5 px-2.5 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-700 text-gray-700 dark:text-gray-200 bg-gray-50 hover:bg-gray-100 disabled:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700/50 dark:disabled:bg-gray-800 focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 inline-flex items-center w-1/2 justify-center"
-                                href="https://bloggr-demo.eventuallycoding.com"
+                                :href="template.demo"
                                 rel="noopener noreferrer"
                                 target="_blank"
                                 ><span
@@ -493,7 +493,7 @@
                             <a
                                 v-if="template.repository"
                                 class="focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-e-md text-sm gap-x-1.5 px-2.5 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-700 text-gray-700 dark:text-gray-200 bg-gray-50 hover:bg-gray-100 disabled:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700/50 dark:disabled:bg-gray-800 focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 inline-flex items-center w-1/2 justify-center"
-                                href="https://github.com/hlassiege/bloggr"
+                                :href="template.repository"
                                 rel="noopener noreferrer"
                                 target="_blank"
                                 ><span
@@ -505,7 +505,7 @@
                             <a
                                 v-if="template.shop"
                                 class="focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-e-md text-sm gap-x-1.5 px-2.5 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-700 text-gray-700 dark:text-gray-200 bg-gray-50 hover:bg-gray-100 disabled:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700/50 dark:disabled:bg-gray-800 focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 inline-flex items-center w-1/2 justify-center"
-                                href="https://github.com/hlassiege/bloggr"
+                                :href="template.shop"
                                 rel="noopener noreferrer"
                                 target="_blank"
                                 ><span
@@ -517,9 +517,7 @@
                             <span
                                 v-if="!template.shop && !template.repository"
                                 class="focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-e-md text-sm gap-x-1.5 px-2.5 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-700 text-gray-700 dark:text-gray-200 bg-gray-50 hover:bg-gray-100 disabled:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700/50 dark:disabled:bg-gray-800 focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 inline-flex items-center w-1/2 justify-center"
-                                href="https://github.com/hlassiege/bloggr"
                                 rel="noopener noreferrer"
-                                target="_blank"
                                 >Soon</span
                             >
                         </div>
