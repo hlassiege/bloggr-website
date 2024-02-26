@@ -7,10 +7,10 @@
                     <!-- Announcement Banner -->
                     <div class="flex justify-center">
                         <a
-                            class="inline-flex items-center gap-x-2 bg-white border border-gray-200 text-sm text-gray-800 p-1 ps-3 rounded-full transition hover:border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:hover:border-gray-600 dark:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                            class="inline-flex items-center gap-x-2 bg-white border border-gray-200 text-sm text-gray-900 p-1 ps-3 rounded-full transition hover:border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:hover:border-gray-600 dark:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                             href="#templates"
                         >
-                            <span class="font-bold text-pink-500">PRO</span>
+                            <span class="font-bold text-pink-600">PRO</span>
                             templates available
                             <span
                                 class="py-1.5 px-2.5 inline-flex justify-center items-center gap-x-2 rounded-full bg-gray-200 font-semibold text-sm text-gray-600 dark:bg-gray-700 dark:text-gray-400"
@@ -187,11 +187,11 @@
                                 </svg>
                             </div>
                             <div class="flex-shrink-0">
-                                <h3
+                                <h2
                                     class="block text-lg font-semibold text-gray-800 dark:text-white"
                                 >
                                     Free hosting
-                                </h3>
+                                </h2>
                             </div>
                         </div>
                         <p class="text-gray-600 dark:text-gray-400">
@@ -230,11 +230,11 @@
                                 </svg>
                             </div>
                             <div class="flex-shrink-0">
-                                <h3
+                                <h2
                                     class="block text-lg font-semibold text-gray-800 dark:text-white"
                                 >
                                     SEO friendly
-                                </h3>
+                                </h2>
                             </div>
                         </div>
                         <p class="text-gray-600 dark:text-gray-400">
@@ -280,11 +280,11 @@
                                 </svg>
                             </div>
                             <div class="flex-shrink-0">
-                                <h3
+                                <h2
                                     class="block text-lg font-semibold text-gray-800 dark:text-white"
                                 >
                                     Markdown with components
-                                </h3>
+                                </h2>
                             </div>
                         </div>
                         <p class="text-gray-600 dark:text-gray-400">
@@ -329,11 +329,11 @@
                                 </svg>
                             </div>
                             <div class="flex-shrink-0">
-                                <h3
+                                <h2
                                     class="block text-lg font-semibold text-gray-800 dark:text-white"
                                 >
                                     Built-in integrations
-                                </h3>
+                                </h2>
                             </div>
                         </div>
                         <p class="text-gray-600 dark:text-gray-400">
@@ -375,11 +375,11 @@
                                 </svg>
                             </div>
                             <div class="flex-shrink-0">
-                                <h3
+                                <h2
                                     class="block text-lg font-semibold text-gray-800 dark:text-white"
                                 >
                                     RSS
-                                </h3>
+                                </h2>
                             </div>
                         </div>
                         <p class="text-gray-600 dark:text-gray-400">
@@ -423,11 +423,11 @@
                                 </svg>
                             </div>
                             <div class="flex-shrink-0">
-                                <h3
+                                <h2
                                     class="block text-lg font-semibold text-gray-800 dark:text-white"
                                 >
                                     Secure & Fast
-                                </h3>
+                                </h2>
                             </div>
                         </div>
                         <p class="text-gray-600 dark:text-gray-400">
@@ -458,7 +458,7 @@
                     :key="template.name"
                     class="shadow-lg mx-20 md:mx-0 rounded-xl divide-y divide-gray-200 dark:divide-gray-800 ring-1 ring-gray-200 dark:ring-gray-800 bg-white dark:bg-gray-900 overflow-hidden"
                 >
-                    <div class="aspect-w-4 aspect-h-2">
+                    <div class="h-48 overflow-hidden">
                         <img
                             :src="template.image"
                             width="280"

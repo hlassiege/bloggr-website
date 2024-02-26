@@ -4,7 +4,7 @@
             <div>
                 <h3 class="font-bold text-lg mb-4">Menu</h3>
                 <ul>
-                    <li v-for="item in menu" :key="item.path">
+                    <li v-for="item in menu" :key="item.path" class="mb-2">
                         <NuxtLink
                             :key="item.path"
                             :to="item.path"
@@ -50,7 +50,7 @@
         </div>
         <div class="max-w-6xl mx-auto flex items-center justify-center mt-6">
             <div
-                class="flex items-center mx-auto mb-2 space-x-2 text-sm text-gray-500 dark:text-gray-400"
+                class="flex items-center mx-auto mb-2 space-x-2 text-sm text-gray-600 dark:text-gray-400"
             >
                 <div>Copyright © {{ new Date().getFullYear() }}</div>
                 <div>•</div>

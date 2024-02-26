@@ -73,10 +73,11 @@
                                 class="text-base font-medium text-gray-500 hover:text-gray-900"
                             >
                                 <div class="flex">
-                                    <img
+                                    <NuxtImg
                                         v-if="config.public.logo"
                                         src="/images/logo.png"
                                         class="h-10 mt-auto"
+                                        alt="logo"
                                     />
                                     <nuxt-link
                                         class="mt-auto text-3xl"
