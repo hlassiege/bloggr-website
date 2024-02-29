@@ -94,6 +94,7 @@ The global configuration of the blog is done in the nuxt.config.ts file.
 You can read the content of runtimeConfig.public in the nuxt.config.ts file to see the configuration of the blog.
 
 You can configure
+* the url of the website,
 * the title,
 * the description,
 * the logo,
@@ -141,15 +142,22 @@ You can tweak the image, title and description of each page in the frontmatter o
 This is highly recommended to do so to have a good SEO, not even mentioning that your blog will look broken if you don't define title for each page...
 
 ## Robots.txt
-By default, the robots.txt allows all robots to crawl the website. It's possible to modify the robots.txt file in the `public` folder.
+By default, the robots.txt allows all robots to crawl the website. It's possible to modify the robots.txt file in the `nuxt.config.ts` file.
 
-For example if you don't want to allow chatGpt or yandex:
-```txt
-User-agent: GPTBot
-Disallow: /
-User-agent: yandex
-Disallow: /
+For example if you don't want to block chatGpt or yandex:
+```typescript
+    robots: {
+        rules: {
+            UserAgent: "*",
+            Disallow: "",
+            Sitemap: URL + "sitemap.xml",
+        },
+    },
 ```
+
+::alert
+Don't forget to configure URL with the url of your website at the top of the nuxt.config.ts file.
+::
 
 ## Performance
 
