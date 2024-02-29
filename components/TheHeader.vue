@@ -75,8 +75,8 @@
                                 <div class="flex">
                                     <NuxtImg
                                         v-if="config.public.logo"
-                                        src="/images/logo.png"
-                                        class="h-10 mt-auto"
+                                        :src="config.public.logo"
+                                        class="h-10 mt-auto rounded-full mr-2"
                                         alt="logo"
                                     />
                                     <nuxt-link
