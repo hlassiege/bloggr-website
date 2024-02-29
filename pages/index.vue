@@ -496,10 +496,6 @@
                                 :href="template.repository"
                                 rel="noopener noreferrer"
                                 target="_blank"
-                                ><span
-                                    class="i-simple-icons-github flex-shrink-0 w-4 h-4"
-                                    aria-hidden="true"
-                                ></span
                                 ><span class="">GitHub</span></a
                             >
                             <a
@@ -508,10 +504,6 @@
                                 :href="template.shop"
                                 rel="noopener noreferrer"
                                 target="_blank"
-                                ><span
-                                    class="i-simple-icons-github flex-shrink-0 w-4 h-4"
-                                    aria-hidden="true"
-                                ></span
                                 ><span class="">Buy</span></a
                             >
                             <span

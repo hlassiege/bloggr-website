@@ -65,6 +65,28 @@ npm run dev
 ```
 
 
+## Deployment
+
+Bloggr is a static website, it means you can host it on any static hosting provider.
+For most providers, you'll generate a static version with the following command:
+
+```bash
+# npm
+npm run generate
+```
+
+Then, you can deploy the `dist` folder to your hosting provider.
+
+However, most static hosting providers have a way to deploy directly from your git repository. You can check the documentation of your hosting provider to see how to do it.
+* [For github-pages](https://nuxt.com/deploy/github-pages)
+* [For netlify](https://nuxt.com/deploy/netlify) or [doc from netlify](https://docs.netlify.com/integrations/frameworks/nuxt/)
+
+All providers are listed here : https://nuxt.com/deploy
+
+::alert{type="warning"}
+Be careful to use static generation with npm run generate. You don't need to use npm run build, it's for server-side rendering.
+::
+
 ## Configuration
 
 The global configuration of the blog is done in the nuxt.config.ts file.
