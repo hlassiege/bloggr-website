@@ -528,6 +528,11 @@ useHead({
     title: config.public.name,
     meta: [
         {
+            key: "canonical",
+            name: "canonical",
+            content: config.public.url,
+        },
+        {
             key: "description",
             name: "description",
             content: config.public.description,
@@ -538,6 +543,11 @@ useHead({
             content: config.public.description,
         },
         { key: "og:type", name: "og:type", content: "website" },
+        {
+            key: "og:image",
+            name: "og:image",
+            content: config.public.url.replace(/\/$/, "") + config.public.logo,
+        },
         { key: "og:title", name: "og:title", content: config.public.name },
         { key: "og:url", name: "og:url", content: config.public.url },
         {

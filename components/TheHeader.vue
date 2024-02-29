@@ -70,7 +70,7 @@
                     >
                         <div class="flex-shrink-0 flex items-center">
                             <span
-                                class="text-base font-medium text-gray-500 hover:text-gray-900"
+                                class="text-base font-medium text-gray-700 hover:text-gray-900"
                             >
                                 <div class="flex">
                                     <NuxtImg
